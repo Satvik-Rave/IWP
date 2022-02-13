@@ -1,0 +1,36 @@
+body{
+    background-color: royalblue;
+    border-style: dashed;
+}
+
+.c1{
+   text-align: center;
+   background-color: red;
+}
+
+.c2{
+    text-align: center;
+    padding-top: 60px;
+}
+
+#ab{
+    width: 200px;
+}
+
+.c3{
+    text-align: center;
+    padding-top: 100px;
+}
+
+#abc{
+    background-color: yellow;
+}
+.c4{
+    font-weight: bold;
+    padding-top: 50px;
+    text-align: center;
+}
+.c5{
+    border-color: red;
+    float: right;
+}

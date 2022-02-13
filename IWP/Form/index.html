@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form</title>
+</head>
+<style>
+    body h2{
+        background-color: black;
+        color: white;
+        font-family: sans-serif;
+        padding: 8px;
+        border: 4px solid #a30303;
+        margin: 15px;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: url("bg2.jpg");
+        background-size: cover;
+    }
+    form{
+        width: 70%;
+        padding: 8px;
+        background-color: #193858;
+        color: white;
+        border: 3px solid black;
+        box-shadow: 5px 5px 8px blue, 10px 10px 8px red, 15px 15px 8px green;
+    }
+    form input{
+        margin: 7px;
+        box-shadow: 2px 2px 4px white;
+    }
+    label{
+        font-weight: bold;
+    }
+
+</style>
+<body>
+    <h2>HACKATHON REGISTRATION FORM</h2>
+    <form action="post" >
+        <label for="fname">First name: </label>
+        <input type="text" id="fname" name="fname" placeholder="Enter First Name"><br>
+        <label for="lname">Last name: </label>
+        <input type="text" id="lname" name="lname" placeholder="Enter Last Name"><br>
+        <label for="reg">Registration Number: </label>
+        <input type="text" id="reg" name="reg" placeholder="Enter Registration Number"><br>
+
+        <span style="font-weight: bold;">Gender:</span>
+        <input type="radio" id="male" name="rad" value="MALE">
+        <label for="male" style="font-weight: normal;">Male</label>
+        <input type="radio" id="female" name="rad" value="FEMALE">
+        <label for="female" style="font-weight: normal;">Female</label><br>
+
+        <label for="con">Contact Number: </label>
+        <input type="text" id="con1" name="con1" value="+91" style="width: 3%;" readonly>
+        <input type="text" id="con" name="con"><br>
+        <label for="email">Email ID: </label>
+        <input type="text" id="email" name="email" placeholder="xyz@gmail.com"><br>
+        <label for="addr">Address: </label><br>
+        <textarea id="addr" name="addr" placeholder="Enter your Address" rows="6" cols="50" style="box-shadow: 2px 2px 4px white;"></textarea><br>
+
+        <label for="team">Team Name:</label>
+        <input type="text" id="team" name="team" placeholder="Enter Team Name"><br>
+        <span style="font-weight: bold;">Topic Domains selected:</span><br>
+        <input type="checkbox" id="c1" name="c1" value="bc">
+        <label for="c1">Blockchain</label><br>
+        <input type="checkbox" id="c2" name="c2" value="iot">
+        <label for="c2">Internet of things</label><br>
+        <input type="checkbox" id="c3" name="c3" value="cs">
+        <label for="c3">Cyber Security</label><br>
+        <input type="checkbox" id="c4" name="c4" value="ai">
+        <label for="c4">Artificial Intelligence</label><br>
+        <input type="checkbox" id="c5" name="c5" value="ip">
+        <label for="c5">Image Processing</label><br>
+        <input type="checkbox" id="c6" name="c6" value="ip">
+        <label for="c6">Web Development</label><br>
+
+        <label for="time">Select presentation time slot:</label>
+        <select id="time" name="time" form="regform" style="box-shadow: 2px 2px 4px white;">
+        <option value="t1">10AM-12PM</option>
+        <option value="t2">2PM-4PM</option>
+        <option value="t3">4PM-6PM</option>
+        <option value="t4">6PM-8PM</option>
+        </select><br>
+        <label for="myFile">Submit you idea here: (pdf)</label>
+        <input type="file" id="myFile" name="filename"><br>
+        <input type="submit">
+        <input type="reset">
+    </form>
+    <script>
+        console.log("abcd");
+        // alert('Helllllllllllo');
+        let reg_num= document.getElementById('reg');
+        let sname= document.getElementById('fname');
+        let contact= document.getElementById('con');
+        let mail= document.getElementById('email');
+
+        fname.addEventListener('blur',()=>{
+            console.log("touch");
+            let exp= /([a-zA-Z]){0,10}/;
+            let exp1= /^\D*$/;
+            let content= fname.value;
+            // content=content.toUpperCase();
+            console.log(content);
+            if (exp.test(content)&&exp1.test(content)) {
+                console.log("match");
+                // reg_num.value=content;
+            }
+            else{
+                alert('enter valid first name');
+            }
+        })
+        reg_num.addEventListener('blur',()=>{
+            console.log("touch");
+            let exp= /(\d){2}([A-Z]){3}(\d){4}/;
+            let content= reg_num.value;
+            content=content.toUpperCase();
+            // console.log(content);
+            if (exp.test(content)) {
+                console.log("match");
+                reg_num.value=content;
+            }
+            else{
+                alert('enter valid reg num');
+            }
+        })
+        contact.addEventListener('blur',()=>{
+            console.log("touch");
+            let exp= /^([0-9]){10}$/;
+            let content= contact.value;
+            // console.log(content);
+            if (exp.test(content)) {
+                console.log("match");
+            }
+            else{
+                alert('enter valid contact number');
+            }
+        })
+        mail.addEventListener('blur',()=>{
+            console.log("touch");
+            let exp= /([_\-\.a-zA-Z0-9]+)@([_\-\.a-zA-Z0-9]+)\.([a-zA-Z]{2,4})/;
+            let content= mail.value;
+            // console.log(content);
+            if (exp.test(content)) {
+                console.log("match");
+            }
+            else{
+                alert('enter valid email');
+            }
+        })
+
+    </script>
+</body>
+</html>

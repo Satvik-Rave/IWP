@@ -1,0 +1,13 @@
+*{
+    background-color: yellow;
+}
+.class1{
+    border-color: tomato;
+    padding-left: 100px;
+    margin-top: 50px;
+    background-color: blue;
+    font-style: italic;
+}
+#abcd{
+    background-color: violet;
+}

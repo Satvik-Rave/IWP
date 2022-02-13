@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Intro2:Forms</title>
+</head>
+
+<body>
+    <h2>This is HTML forms tutorial</h2>
+    <!-- use form to save info in backend server -->
+    <form action="backend.php">
+        <!-- label assigns a title to the entry where for=id -->
+        <label for="name"> Name</label>
+        <div>
+            <input type="text" name="myName" id="name">
+        </div>
+        <br>
+        <div>
+            Role: <input type="text" name="myRole">
+        </div>
+        <br>
+        <!--input type=email lets u enter mail id -->
+        <div>
+            Email: <input type="email" name="myEmail">
+        </div>
+        <br>
+        <!-- type= date gives u calendar to select date -->
+        <div>
+            Date: <input type="date" name="myDate">
+        </div>
+        <br>
+        <!-- type= number can enter numerics -->
+        <div>
+            Bonus: <input type="number" name="myBonus">
+        </div>
+        <br>
+        <!-- type= checkbox provides a checkbox -->
+        <div>
+            Are you eligible?: <input type="checkbox" name="myEligibility" checked>
+        </div>
+        <br>
+        <!-- type=radio/button provides buttons -->
+        <div>
+            Gender: Male <input type="radio" name="myGender"> Female <input type="radio" name="myGender">
+            Other <input type="radio" name="myGender">
+        </div>
+        <!-- use textarea to insert blank text box of random size -->
+        <br>
+        <div>
+            Write about yourself: <br><textarea name="myText" cols="90" rows="10"></textarea>
+        </div>
+        <!-- use select and option for providing drop down options of an input -->
+        <br>
+        <div>
+            <label for="car">Car</label>
+            <select name="myCar" id="car">
+                <option value="ind">Indica</option>
+                <option value="swf" selected>Swift</option>
+            </select>
+        </div>
+        <br>
+        <!-- input type submit used to submit the form filled, reset is used to empty the form boxes again -->
+        <div>
+            <input type="submit" value="Submit Now">
+            <input type="reset" value="Reset Now">
+        </div>
+    </form>
+    <details>
+        <summary>
+            More details here
+        </summary>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo maxime vitae eum corporis a soluta atque ut sequi vel exercitationem dolores velit consequatur optio necessitatibus laboriosam perferendis cum, quia iste eos nemo nulla voluptatum dolor eligendi! Sit vero, nemo, odio laboriosam aspernatur temporibus dicta nesciunt iste, alias obcaecati eveniet deserunt.
+    </details>
+</body>
+
+</html>

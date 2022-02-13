@@ -1,0 +1,51 @@
+html{
+    scroll-behavior: smooth;
+}
+body
+{
+    background: url('tech.gif');
+    background-size: 220vh;
+    /* background-repeat: no-repeat; */
+}
+.container{
+    border-radius: 25px;
+    border: 2px solid white;
+    color: #ffffff;
+    width: 700px;
+    margin: auto;
+    margin-top: 80px;
+    padding: 70px 30px 70px 30px;
+    background: url('cs.jpg');
+    background-size: 65vh;
+    overflow-wrap: break-word;
+}
+.container1{
+    border-radius: 25px;
+    border: 2px solid white;
+    color: #ffffff;
+    width: 700px;
+    margin: auto;
+    margin-top: 160px;
+    padding: 70px 30px 70px 30px;
+    background: url('cs.jpg');
+    background-size: 65vh;
+}
+.container2{
+    border-radius: 25px;
+    border: 2px solid white;
+    color: #ffffff;
+    width: 700px;
+    margin: auto;
+    margin-top: 160px;
+    margin-bottom: 80px;
+    padding: 70px 30px 70px 30px;
+    background: url('cs.jpg');
+    background-size: 65vh;
+}
+.dwn{
+    width: 35px;
+    height: 34px;
+    padding-top: 20px;
+    float: right;
+}
+
